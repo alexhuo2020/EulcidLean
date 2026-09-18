@@ -1,0 +1,10 @@
+#check Nat.two_pow_pos
+#check Nat.two_pow_pred_mul_two
+#check Nat.two_pow_succ
+#check Nat.pow_succ
+#check Nat.geomSum
+#check List.sum
+#check List.range
+#check List.map
+#check Nat.mod_two_eq_zero_or_one
+#check Nat.even_iff

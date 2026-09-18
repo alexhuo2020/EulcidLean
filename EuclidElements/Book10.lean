@@ -1,0 +1,20 @@
+import EuclidElements.Book10.Proposition01
+import EuclidElements.Book10.Proposition02
+import EuclidElements.Book10.Proposition03
+import EuclidElements.Book10.Proposition04
+import EuclidElements.Book10.Proposition05
+import EuclidElements.Book10.Proposition06
+import EuclidElements.Book10.Proposition07
+import EuclidElements.Book10.Proposition08
+import EuclidElements.Book10.Proposition09
+import EuclidElements.Book10.Proposition10
+import EuclidElements.Book10.Proposition11
+import EuclidElements.Book10.Proposition12
+import EuclidElements.Book10.Proposition13
+import EuclidElements.Book10.Proposition14
+import EuclidElements.Book10.Proposition15
+import EuclidElements.Book10.Proposition16
+
+import EuclidElements.Book10.Proposition19
+import EuclidElements.Book10.Proposition20
+import EuclidElements.Book10.Proposition21
