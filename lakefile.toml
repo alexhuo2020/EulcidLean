@@ -1,0 +1,6 @@
+name = "euclid-elements"
+version = "0.1.0"
+defaultTargets = ["EuclidElements"]
+
+[[lean_lib]]
+name = "EuclidElements"

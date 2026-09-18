@@ -1,0 +1,100 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Euclid I.1 — Lean Proof Visualizer</title><style>body{font-family:system-ui;margin:0;background:#f7f7f9;color:#17171b}header{padding:18px 24px;background:#17171b;color:white}main{display:grid;grid-template-columns:1fr 1.2fr;gap:18px;padding:18px}.card{background:white;border:1px solid #ddd;border-radius:14px;padding:18px;box-shadow:0 2px 8px #0001}button{margin:4px;padding:9px 12px;border:1px solid #bbb;border-radius:9px;background:white;cursor:pointer}.active{background:#17171b;color:white}svg{width:100%;height:410px}.muted{color:#666}.proof{font-family:ui-monospace,monospace;background:#f2f2f4;padding:12px;border-radius:10px;white-space:pre-wrap}.ok{color:#087f23;font-weight:700}@media(max-width:850px){main{grid-template-columns:1fr}}
+.flow-wrap{margin:18px;padding:18px;background:white;border:1px solid #ddd;border-radius:14px;box-shadow:0 2px 8px #0001}.flow-svg{width:100%;height:520px;overflow:visible}.flow-node{cursor:pointer}.flow-node rect{fill:#fff;stroke:#999;stroke-width:2}.flow-node text{font-family:system-ui;font-size:15px;fill:#17171b}.flow-node.active rect{stroke:#17171b;stroke-width:4;fill:#f0f0f2}.flow-edge{stroke:#888;stroke-width:2.5;fill:none;marker-end:url(#arrow)}.flow-label{font-size:13px;fill:#555}.flow-title{font-size:20px;font-weight:700}.flow-sub{font-size:14px;fill:#666}
+</style></head><body><header><b>Euclid's Elements × Lean</b> — Proposition I.1 Visual Proof</header><main><section class="card"><h2>Construction</h2><p>On a given finite straight line, construct an equilateral triangle.</p><svg viewBox="0 0 600 410"><line id="ab" x1="150" y1="300" x2="450" y2="300" stroke="#222" stroke-width="4"/><circle id="ca" cx="150" cy="300" r="300" fill="none" stroke="#999" stroke-width="2" visibility="hidden"/><circle id="cb" cx="450" cy="300" r="300" fill="none" stroke="#999" stroke-width="2" visibility="hidden"/><line id="ac" x1="150" y1="300" x2="300" y2="40.2" stroke="#222" stroke-width="4" visibility="hidden"/><line id="bc" x1="450" y1="300" x2="300" y2="40.2" stroke="#222" stroke-width="4" visibility="hidden"/><g font-size="22"><circle cx="150" cy="300" r="6"/><text x="125" y="330">A</text><circle cx="450" cy="300" r="6"/><text x="460" y="330">B</text><g id="cp" visibility="hidden"><circle cx="300" cy="40.2" r="6"/><text x="310" y="40">C</text></g></g></svg><div id="buttons"></div></section><section class="card"><h2 id="stepTitle">Given segment AB</h2><p id="desc" class="muted"></p><div id="lean" class="proof"></div><h3>Machine-checked consequence</h3><div id="fact"></div><h3>Dependency path</h3><div id="deps" class="proof"></div></section></main>
+<section class="flow-wrap"><h2>Full logical proof graph</h2><p class="muted">This is the complete proof logic for Lean's Euclid I.1 formalization. Click a node to jump to the associated proof step.</p><svg class="flow-svg" style="height:1120px" viewBox="0 0 1280 1120" aria-label="Full logical dependency graph for Euclid I.1"><defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#888"/></marker></defs>
+<text x="20" y="32" class="flow-title">Euclid I.1 — complete logical dependency graph</text>
+<text x="20" y="57" class="flow-sub">Hypotheses and foundations → constructions → witnesses → local facts → logical synthesis → definitions → final theorem</text>
+
+<text x="20" y="105" class="flow-label">1. Inputs and foundational principles</text>
+<text x="20" y="225" class="flow-label">2. Circle constructions</text>
+<text x="20" y="350" class="flow-label">3. Common intersection witness</text>
+<text x="20" y="475" class="flow-label">4. Join the new point to A and B</text>
+<text x="20" y="600" class="flow-label">5. Radius/congruence facts</text>
+<text x="20" y="735" class="flow-label">6. Common Notion 1 / congruence logic</text>
+<text x="20" y="865" class="flow-label">7. Package definitions</text>
+<text x="20" y="990" class="flow-label">8. Existential conclusion</text>
+
+<!-- top nodes -->
+<g class="flow-node" data-step="0"><rect x="40" y="120" rx="12" width="190" height="55"/><text x="135" y="145" text-anchor="middle">Given</text><text x="135" y="166" text-anchor="middle">hAB : A ≠ B</text></g>
+<g class="flow-node" data-step="1"><rect x="270" y="120" rx="12" width="190" height="55"/><text x="365" y="145" text-anchor="middle">Postulate 3</text><text x="365" y="166" text-anchor="middle">construct circles</text></g>
+<g class="flow-node" data-step="3"><rect x="500" y="120" rx="12" width="220" height="55"/><text x="610" y="145" text-anchor="middle">ImplicitAxioms</text><text x="610" y="166" text-anchor="middle">circle intersection</text></g>
+<g class="flow-node" data-step="4"><rect x="760" y="120" rx="12" width="190" height="55"/><text x="855" y="145" text-anchor="middle">Postulate 1</text><text x="855" y="166" text-anchor="middle">join two points</text></g>
+<g class="flow-node" data-step="6"><rect x="990" y="120" rx="12" width="230" height="55"/><text x="1105" y="145" text-anchor="middle">Congruence laws / CN1</text><text x="1105" y="166" text-anchor="middle">reverse, symmetry, transitivity</text></g>
+
+<!-- construction nodes -->
+<g class="flow-node" data-step="1"><rect x="120" y="245" rx="12" width="250" height="65"/><text x="245" y="270" text-anchor="middle">cA centered at A</text><text x="245" y="293" text-anchor="middle">B ∈ cA, radius AB</text></g>
+<g class="flow-node" data-step="2"><rect x="430" y="245" rx="12" width="250" height="65"/><text x="555" y="270" text-anchor="middle">cB centered at B</text><text x="555" y="293" text-anchor="middle">A ∈ cB, radius BA</text></g>
+<g class="flow-node" data-step="2"><rect x="740" y="245" rx="12" width="250" height="65"/><text x="865" y="270" text-anchor="middle">hBA : B ≠ A</text><text x="865" y="293" text-anchor="middle">from Ne.symm hAB</text></g>
+
+<!-- intersection -->
+<g class="flow-node" data-step="3"><rect x="300" y="370" rx="12" width="360" height="70"/><text x="480" y="397" text-anchor="middle">equilateralCircleIntersection</text><text x="480" y="420" text-anchor="middle">choose C with C ∈ cA and C ∈ cB</text></g>
+<g class="flow-node" data-step="3"><rect x="720" y="370" rx="12" width="300" height="70"/><text x="870" y="397" text-anchor="middle">hCneA, hCneB, hnoncol</text><text x="870" y="420" text-anchor="middle">C distinct; A,B,C noncollinear</text></g>
+
+<!-- join -->
+<g class="flow-node" data-step="4"><rect x="165" y="495" rx="12" width="300" height="70"/><text x="315" y="522" text-anchor="middle">hAC : A ≠ C</text><text x="315" y="545" text-anchor="middle">P1 gives lAC through A,C</text></g>
+<g class="flow-node" data-step="4"><rect x="530" y="495" rx="12" width="300" height="70"/><text x="680" y="522" text-anchor="middle">hBC : B ≠ C</text><text x="680" y="545" text-anchor="middle">P1 gives lBC through B,C</text></g>
+
+<!-- local congruence facts -->
+<g class="flow-node" data-step="5"><rect x="120" y="620" rx="12" width="300" height="70"/><text x="270" y="647" text-anchor="middle">hAC_AB</text><text x="270" y="670" text-anchor="middle">AC ≅ AB from C ∈ cA</text></g>
+<g class="flow-node" data-step="5"><rect x="480" y="620" rx="12" width="300" height="70"/><text x="630" y="647" text-anchor="middle">hBC_BA</text><text x="630" y="670" text-anchor="middle">BC ≅ BA from C ∈ cB</text></g>
+<g class="flow-node" data-step="6"><rect x="840" y="620" rx="12" width="300" height="70"/><text x="990" y="647" text-anchor="middle">hAB_BA</text><text x="990" y="670" text-anchor="middle">AB ≅ BA by segmentReverse</text></g>
+
+<!-- synthesis -->
+<g class="flow-node" data-step="6"><rect x="90" y="755" rx="12" width="260" height="70"/><text x="220" y="782" text-anchor="middle">hBA_BC</text><text x="220" y="805" text-anchor="middle">BA ≅ BC by symmetry</text></g>
+<g class="flow-node" data-step="6"><rect x="390" y="755" rx="12" width="260" height="70"/><text x="520" y="782" text-anchor="middle">hAB_BC</text><text x="520" y="805" text-anchor="middle">AB ≅ BC by transitivity</text></g>
+<g class="flow-node" data-step="6"><rect x="690" y="755" rx="12" width="260" height="70"/><text x="820" y="782" text-anchor="middle">hAB_AC</text><text x="820" y="805" text-anchor="middle">AB ≅ AC by symmetry</text></g>
+<g class="flow-node" data-step="6"><rect x="990" y="755" rx="12" width="240" height="70"/><text x="1110" y="782" text-anchor="middle">hAC_BC</text><text x="1110" y="805" text-anchor="middle">AC ≅ BC by transitivity</text></g>
+
+<!-- package -->
+<g class="flow-node" data-step="7"><rect x="250" y="885" rx="12" width="340" height="70"/><text x="420" y="912" text-anchor="middle">htriangle : IsTriangle G A B C</text><text x="420" y="935" text-anchor="middle">distinctness + noncollinearity</text></g>
+<g class="flow-node" data-step="7"><rect x="690" y="885" rx="12" width="340" height="70"/><text x="860" y="912" text-anchor="middle">hequilateral : Equilateral G A B C</text><text x="860" y="935" text-anchor="middle">AB≅AC, AB≅BC, AC≅BC</text></g>
+
+<!-- final -->
+<g class="flow-node" data-step="7"><rect x="290" y="1010" rx="14" width="700" height="75"/><text x="640" y="1038" text-anchor="middle">proposition1_construction</text><text x="640" y="1062" text-anchor="middle">∃ C, ∃ lAC lBC, line incidences ∧ IsTriangle ∧ Equilateral</text></g>
+
+<!-- edges -->
+<g class="flow-edge">
+<path d="M135 175 C135 210,245 210,245 245"/>
+<path d="M135 175 C135 210,555 210,555 245"/>
+<path d="M365 175 C365 210,245 210,245 245"/>
+<path d="M365 175 C365 210,555 210,555 245"/>
+<path d="M135 175 C135 215,865 215,865 245"/>
+<path d="M245 310 C245 345,480 345,480 370"/>
+<path d="M555 310 C555 345,480 345,480 370"/>
+<path d="M610 175 L610 335 C610 352,550 352,550 370"/>
+<path d="M480 440 C480 468,315 468,315 495"/>
+<path d="M480 440 C480 468,680 468,680 495"/>
+<path d="M870 440 C870 468,315 468,315 495"/>
+<path d="M870 440 C870 468,680 468,680 495"/>
+<path d="M855 175 C855 470,315 470,315 495"/>
+<path d="M855 175 C855 470,680 470,680 495"/>
+<path d="M480 440 C480 575,270 575,270 620"/>
+<path d="M480 440 C480 575,630 575,630 620"/>
+<path d="M245 310 C245 580,270 580,270 620"/>
+<path d="M555 310 C555 580,630 580,630 620"/>
+<path d="M1105 175 L990 620"/>
+<path d="M630 690 C630 725,220 725,220 755"/>
+<path d="M990 690 C990 725,520 725,520 755"/>
+<path d="M220 825 C220 845,520 845,520 825"/>
+<path d="M270 690 C270 725,820 725,820 755"/>
+<path d="M270 690 C270 735,1110 735,1110 755"/>
+<path d="M520 825 C520 845,1110 845,1110 825"/>
+<path d="M870 440 C870 855,420 855,420 885"/>
+<path d="M820 825 C820 855,860 855,860 885"/>
+<path d="M520 825 C520 855,860 855,860 885"/>
+<path d="M1110 825 C1110 855,860 855,860 885"/>
+<path d="M420 955 C420 985,640 985,640 1010"/>
+<path d="M860 955 C860 985,640 985,640 1010"/>
+</g>
+</svg>
+<div class="proof" style="margin-top:12px">Logical spine:
+A ≠ B
+→ Postulate 3 constructs cA and cB
+→ ImplicitAxioms gives a common point C and noncollinearity
+→ Postulate 1 joins A-C and B-C
+→ circle radius semantics gives AC ≅ AB and BC ≅ BA
+→ reversal + symmetry + transitivity (Common Notion 1) yields all three side congruences
+→ definitions produce IsTriangle and Equilateral
+→ existential witnesses close proposition1_construction
+→ proposition1 follows by forgetting lAC and lBC.</div></section>
+<script>const S=[['Given segment AB','Start with distinct points A and B.','(A B : G.Point) (hAB : A ≠ B)','A ≠ B','hAB'],['Circle centered at A','Postulate 3 constructs the circle centered at A through B.','P.postulate3 A B hAB','B lies on cA; radius semantics fixed','hAB → P3 → cA'],['Circle centered at B','Apply Postulate 3 again, reversing the endpoints.','P.postulate3 B A (Ne.symm hAB)','A lies on cB','hAB → P3 → cB'],['Choose common point C','The project makes Euclid’s implicit circle-intersection assumption explicit.','I.equilateralCircleIntersection ...','C lies on both circles and A,B,C are noncollinear','cA + cB → ImplicitAxioms → C'],['Join A–C and B–C','Postulate 1 supplies the two straight lines.','P.postulate1 A C hAC\nP.postulate1 B C hBC','AC and BC are constructed','C → P1 → AC, BC'],['Read equal radii','Membership in each circle gives the required segment congruences.','have hAC_AB := (hcAradius C).mp hConcA\nhave hBC_BA := (hcBradius C).mp hConcB','AC ≅ AB and BC ≅ BA','circle membership → radius semantics → equal sides'],['Common Notion 1','Symmetry/reversal and transitivity combine the equalities.','I.segmentReverse ...\nI.segmentSymm ...\nI.segmentTrans ...','AB ≅ AC, AB ≅ BC, AC ≅ BC','equal radii → CN1/transitivity → all three sides equal'],['Conclusion','Lean packages noncollinearity and the three side congruences into the final witnesses.','exact ⟨C, lAC, lBC, ..., htriangle, hequilateral⟩','✓ IsTriangle G A B C   ✓ Equilateral G A B C','P3 + intersection + P1 + CN1 → proposition1_construction']];let cur=0;const ids=['ca','cb','cp','ac','bc'];function show(i){cur=i;document.querySelectorAll('button').forEach((b,j)=>b.className=j==i?'active':'');document.querySelectorAll('.flow-node').forEach(n=>n.classList.toggle('active',Number(n.dataset.step)===i));document.getElementById('stepTitle').textContent=S[i][0];desc.textContent=S[i][1];lean.textContent=S[i][2];fact.innerHTML='<span class="ok">'+S[i][3]+'</span>';deps.textContent=S[i][4];ca.style.visibility=i>=1?'visible':'hidden';cb.style.visibility=i>=2?'visible':'hidden';cp.style.visibility=i>=3?'visible':'hidden';ac.style.visibility=i>=4?'visible':'hidden';bc.style.visibility=i>=4?'visible':'hidden'}S.forEach((s,i)=>{let b=document.createElement('button');b.textContent=(i+1)+' '+s[0];b.onclick=()=>show(i);buttons.appendChild(b)});document.querySelectorAll('.flow-node').forEach(n=>n.addEventListener('click',()=>show(Number(n.dataset.step))));show(0);</script></body></html>
